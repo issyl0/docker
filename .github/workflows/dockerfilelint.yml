@@ -4,5 +4,6 @@ jobs:
   dockerfilelint:
     uses: actions/setup-node@v1
     runs-on: ubuntu-latest
-    run: npm install -g dockerfilelint
-    run: dockerfilelint */Dockerfile
+    steps:
+      - run: npm install -g dockerfilelint
+      - run: dockerfilelint */Dockerfile
