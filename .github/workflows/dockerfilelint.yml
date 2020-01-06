@@ -2,7 +2,7 @@ name: Lint all Dockerfiles
 on: pull_request
 jobs:
   dockerfilelint:
-    - uses: actions/setup-node@v1
-    - runs-on: ubuntu-latest
-    - run: npm install -g dockerfilelint
-    - run: dockerfilelint */Dockerfile
+    uses: actions/setup-node@v1
+    runs-on: ubuntu-latest
+    run: npm install -g dockerfilelint
+    run: dockerfilelint */Dockerfile
